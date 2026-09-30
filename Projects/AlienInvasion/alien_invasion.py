@@ -98,6 +98,13 @@ class AlienInvasion:
         # Future Ideas:
         # disappear True: bullet, False: power-up? 
         #           True: alien,  False: shield?
+        
+        if not self.aliens:
+            # When entire fleet is destroyed.
+            # Destroy existing bullets and create a new fleet.
+            self.bullets.empty()
+            self._create_fleet()
+
 
     def _update_aliens(self):
         """Check if the fleet is at an edge, then update positions."""
