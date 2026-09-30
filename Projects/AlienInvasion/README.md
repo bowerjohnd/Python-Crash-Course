@@ -15,3 +15,14 @@
        - An alien touches the player's ship
        - An alien reaches the bottom of the screen
      - Game ends when the player loses 3 ships
+
+ - Coding: Alien Invasion
+   - Set up game screen
+     - Pygame
+     - Create settings module for fine tuning
+   - Ship image on screen
+   - Move ship left and right
+     - prevent ship from moving off screen
+   - Bullets fired from ship
+     - remove bullets from group when off screen
+   - Misc. settings tuning
