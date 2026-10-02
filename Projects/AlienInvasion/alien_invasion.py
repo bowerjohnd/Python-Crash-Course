@@ -1,5 +1,6 @@
 import sys
 from time import sleep
+from pathlib import Path
 
 import pygame
 
@@ -65,6 +66,7 @@ class AlienInvasion:
  
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                self.stats.saved_stats()
                 print("Thanks for playing!")
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
@@ -108,6 +110,7 @@ class AlienInvasion:
         elif event.key == pygame.K_LEFT:
             self.ship.moving_left = True
         elif event.key == pygame.K_q:
+            self.stats.saved_stats()
             sys.exit()
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
@@ -191,7 +194,7 @@ class AlienInvasion:
             self.bullets.empty()
             #self.aliens.empty()
 
-            # Reset fleet position to top and center the ship.
+            # Reset alien fleet position to top and center the ship.
             #self._create_fleet()
             self._reset_fleet_position()
             self.ship.center_ship()
@@ -264,7 +267,6 @@ class AlienInvasion:
             self.play_button.draw_button()
 
         pygame.display.flip()
-
 
 if __name__ == '__main__':
     # Make a game instance, and run the game.
