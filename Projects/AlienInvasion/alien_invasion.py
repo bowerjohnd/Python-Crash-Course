@@ -189,10 +189,11 @@ class AlienInvasion:
 
             # Get rid of any remaining bullets and aliens.
             self.bullets.empty()
-            self.aliens.empty()
+            #self.aliens.empty()
 
-            # Create a new fleet and center the ship.
-            self._create_fleet()
+            # Reset fleet position to top and center the ship.
+            #self._create_fleet()
+            self._reset_fleet_position()
             self.ship.center_ship()
 
             # Pause
@@ -217,6 +218,14 @@ class AlienInvasion:
             # Finished a row; reset x value, and increment y value.
             current_x = alien_width
             current_y += 2 * alien_height
+
+    def _reset_fleet_position(self):
+        """Reset entire fleet position to the top after losing a ship."""
+
+        # Move alien fleet up: current top row to one alien height from screen top
+        min_y = min(alien.rect.top for alien in self.aliens.sprites())
+        for alien in self.aliens.sprites():
+            alien.rect.y -= (min_y - alien.rect.height)
 
     def _create_alien(self, x_position, y_position):
         """Create an alien and place it in the fleet."""
