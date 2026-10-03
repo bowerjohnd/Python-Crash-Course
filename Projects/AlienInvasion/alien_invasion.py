@@ -162,6 +162,7 @@ class AlienInvasion:
             # Increase level
             self.stats.level += 1
             self.sb.prep_level()
+            self.sb.check_high_level()
 
     def _update_aliens(self):
         """Check if the fleet is at an edge, then update positions."""
@@ -259,7 +260,7 @@ class AlienInvasion:
         self.ship.blitme()
         self.aliens.draw(self.screen)
 
-        # Draw the score information.
+        # Draw the score and information.
         self.sb.show_score()
 
         # Make the Play button.

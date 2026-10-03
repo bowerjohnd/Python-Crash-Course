@@ -16,6 +16,7 @@ class GameStats:
 
         # High score should never be reset.
         self.high_score = 0
+        self.high_level = 1
         self.level = 1
 
         # Read in saved stats.
@@ -26,6 +27,7 @@ class GameStats:
         """Initialize statistics that can change during the game."""
         self.ships_left = self.settings.ship_limit
         self.score = 0
+        self.level = 1
 
     def saved_stats(self):
         """Read and write hashed stats to file."""
@@ -34,11 +36,23 @@ class GameStats:
         # Check for saved stats file, create one if not exist
         if path.is_file():
             self.loaded_in_dict = json.loads(path.read_text(encoding="utf-8"))
-            self.saved_high_score = self._decrypt_number_value(self.loaded_in_dict['high_score'])
-            print(self.saved_high_score)
+
+            # Read high score from file
+            if 'high_score' in self.loaded_in_dict:
+                self.saved_high_score = self._decrypt_number_value(self.loaded_in_dict['high_score'])
+            else:
+                self.saved_high_score = 0
+            # Read high level from file
+            if 'high_level' in self.loaded_in_dict:
+                self.saved_high_level = self._decrypt_number_value(self.loaded_in_dict['high_level'])
+            else:
+                self.saved_high_level = 1
+
         else:
             self.saved_high_score = 0
-            empty_stats = {'high_score': self._encrypt_number_value(0)}
+            self.saved_high_level = 1
+            empty_stats = {'high_score': self._encrypt_number_value(0),
+                           'high_level': self._encrypt_number_value(1)}
             path.write_text(json.dumps(empty_stats, indent=4), encoding="utf-8")
 
         # Save current high score if higher than saved high score.
@@ -48,6 +62,14 @@ class GameStats:
             path.write_text(json.dumps(self.loaded_in_dict, indent=4), encoding="utf-8")
         else:
             self.high_score = self.saved_high_score
+
+        # Save current high level if higher than saved high level.
+        if self.saved_high_level < self.high_level:
+            hash_high_level = self._encrypt_number_value(self.high_level)
+            self.loaded_in_dict['high_level'] = hash_high_level
+            path.write_text(json.dumps(self.loaded_in_dict, indent=4), encoding="utf-8")
+        else:
+            self.high_level = self.saved_high_level
 
     def _encrypt_number_value(self, value: int) -> str:
         # Scramble the value using SECRET KEY
