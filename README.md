@@ -39,3 +39,18 @@ Python Crash Course, 3nd Edition, Eric Matthes © 2023 by No Starch Press
             </td>
         </tr>
     </table>
+    <table>
+        <tr>
+            <td width="20%">
+                <img src="./Projects/DataVisualization/images/sitka_highs_lows_screenshot.jpg" width="300"><br>
+                <img src="./Projects/DataVisualization/images/eq_world_map_screenshot.jpg" width="300">
+            </td>
+            <td>
+                <p>
+                    Chapter 16  <br>
+                      - Sitka, Alaski, high and low temperatures, plotted with matplotlib.<br>
+                      - World Earthquakes: name, magnitude, and location, plotted on a world map with plotly.express in a new browser tab.<br>
+                </p>
+            </td>
+        </tr>
+    </table>
