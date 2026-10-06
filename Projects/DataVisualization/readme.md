@@ -14,14 +14,27 @@ Generating Data
 
  - Dice Roll
    - Roll a single die, or multiple dice
-     - count the frequency of results
+     - Count the frequency of results
      - Plot the frequency on a bar graph
    - plotly.express
-     - displays in a new browser tab
-     - can save as an html file (>3000 lines generated)
+     - Displays in a new browser tab
+     - Can save as an html file (>3000 lines generated)
 
 **Chapter 16**
 Downloading Data
+
+ - Sitka, AK, temps
+   - Read from csv file
+   - Plot the high and low temperatures
+   - matplotlib
+
+ - World Earthquakes
+   - Read from geojson file
+   - Plot the name, magnitude, and location
+     - Color gradient scale for magnitudes
+   - plotly.express
+     - Displays in a new browser tab
+     - Plotted on a World Map
 
 **Chapter 17**
 APIs
