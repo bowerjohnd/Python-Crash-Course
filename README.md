@@ -20,3 +20,22 @@ Python Crash Course, 3nd Edition, Eric Matthes © 2023 by No Starch Press
             </td>
         </tr>
     </table>
+
+   - Data Visualization  
+    <table>
+        <tr>
+            <td width="20%">
+                <img src="./Projects/DataVisualization/images/mpl_squares_screenshot.jpg" width="300"><br>
+                <img src="./Projects/DataVisualization/images/rw_visual_screenshot.jpg" width="300"><br>
+                <img src="./Projects/DataVisualization/images/die_visual_screenshot.jpg" width="300">
+            </td>
+            <td>
+                <p>
+                    Chapter 15  <br>
+                      - Squares of a list, plotted with matplotlib.<br>
+                      - "Random Walk" of 50,000 points that change direction and step size, plotted with matplotlib.<br>
+                      - Rolling Dice, plotting frequency of results with plotly.express in a new browser tab.<br>
+                </p>
+            </td>
+        </tr>
+    </table>
