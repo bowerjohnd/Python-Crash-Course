@@ -31,7 +31,7 @@ Python Crash Course, 3nd Edition, Eric Matthes © 2023 by No Starch Press
             </td>
             <td>
                 <p>
-                    Chapter 15  <br>
+                    Chapter 15 - generated data <br>
                       - Squares of a list, plotted with matplotlib.<br>
                       - "Random Walk" of 50,000 points that change direction and step size, plotted with matplotlib.<br>
                       - Rolling Dice, plotting frequency of results with plotly.express in a new browser tab.<br>
@@ -47,9 +47,9 @@ Python Crash Course, 3nd Edition, Eric Matthes © 2023 by No Starch Press
             </td>
             <td>
                 <p>
-                    Chapter 16  <br>
-                      - Sitka, Alaski, high and low temperatures, plotted with matplotlib.<br>
-                      - World Earthquakes: name, magnitude, and location, plotted on a world map with plotly.express in a new browser tab.<br>
+                    Chapter 16 - downloaded data <br>
+                      - csv file, Sitka, Alaski, high and low temperatures, plotted with matplotlib.<br>
+                      - geojson file, World Earthquakes: name, magnitude, and location, plotted on a world map with plotly.express in a new browser tab.<br>
                 </p>
             </td>
         </tr>
@@ -62,7 +62,7 @@ Python Crash Course, 3nd Edition, Eric Matthes © 2023 by No Starch Press
             </td>
             <td>
                 <p>
-                    Chapter 17  <br>
+                    Chapter 17 - API requested data <br>
                       - API call to GitHub, plot python repos with over 10k stars, plotted with plotly.express.<br>
                       - API call to Hacker News, query and summary of first 30 articles on front page.<br>
                 </p>
