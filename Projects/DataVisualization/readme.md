@@ -37,5 +37,16 @@ Downloading Data
      - Plotted on a World Map
 
 **Chapter 17**
-APIs
+API Calls
 
+ - GitHub API
+   - Query Python repos with over 10k stars, sort from query.
+     - Print summary of top 30 results.
+     - Plot bar graph of top 30 results, with name linked to repo url.
+       - plotly.express
+
+ - Hacker News API
+   - Query one specific article to get result format/layout.
+   - Query Hacker News front page 'top stories'.
+     - Query each of the first 30 articles
+       - Sort by comment count and print summary of each
