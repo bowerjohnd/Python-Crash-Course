@@ -54,3 +54,18 @@ Python Crash Course, 3nd Edition, Eric Matthes © 2023 by No Starch Press
             </td>
         </tr>
     </table>
+    <table>
+        <tr>
+            <td width="20%">
+                <img src="./Projects/DataVisualization/images/python_repos_visual_screenshot.jpg" width="300"><br>
+                <img src="./Projects/DataVisualization/images/hn_submissions_screenshot.jpg" width="300">
+            </td>
+            <td>
+                <p>
+                    Chapter 17  <br>
+                      - API call to GitHub, plot python repos with over 10k stars, plotted with plotly.express.<br>
+                      - API call to Hacker News, query and summary of first 30 articles on front page.<br>
+                </p>
+            </td>
+        </tr>
+    </table>
