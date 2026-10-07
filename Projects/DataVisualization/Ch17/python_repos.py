@@ -30,9 +30,9 @@ repo_dicts = response_dict['items']
 print(f"Repositories returned: {len(repo_dicts)}")
 
 print("\nSelected information about each repository:")
-for repo_dict in repo_dicts:
-    print(f"\nName: {repo_dict['name']}")
-    print(f"Owner: {repo_dict['owner']['login']}")
-    print(f"Stars: {repo_dict['stargazers_count']}")
-    print(f"Repository: {repo_dict['html_url']}")
-    print(f"Description: {repo_dict['description']}")
+for index, repo_dict in enumerate(repo_dicts):
+    print(f"\n{index}\tName: {repo_dict['name']}")
+    print(f"\tOwner: {repo_dict['owner']['login']}")
+    print(f"\tStars: {repo_dict['stargazers_count']}")
+    print(f"\tRepository: {repo_dict['html_url']}")
+    print(f"\tDescription: {repo_dict['description']}")
