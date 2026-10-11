@@ -1,3 +1,6 @@
+# The settings.py file has django generated sensitive data.
+#       The following is my additions to settings.py:
+
 INSTALLED_APPS = [
     # My apps.
     'learning_logs',
